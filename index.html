@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171817">
+  <meta name="description" content="Find your sound. Book a recording or rehearsal room at Roomtone.">
+  <title>Roomtone — Find your sound</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="brand" href="#top" aria-label="Roomtone home"><span class="brand-mark">R</span> ROOMTONE</a>
+    <nav class="nav" aria-label="Main navigation">
+      <nav class="nav">
+  <a href="#rooms">Our rooms</a>
+  <a href="how-it-works.html">How it works</a>
+  <a href="#booking" class="nav-cta button">Book a session ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="shell hero" aria-labelledby="hero-title">
+        <img src="src/vinyl.jpg" alt="Music frequencies" class="hero-main-img">
+      <div>
+        <div class="eyebrow">A space for your next sound</div>
+        <h1 id="hero-title">Make room<br>for <em>music.</em></h1>
+        <p class="hero-copy">A quiet place to record, a loud place to rehearse. Bring your people, bring your ideas — we’ll take care of the room.</p>
+        <div class="hero-actions">
+          <a class="button" href="#rooms">Explore the rooms <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#booking">Plan a session</a>
+        </div>
+      </div>
+     <a href="/" class="brand"> <span class="logo-icon">R</span> ROOMTONE </a>
+      </div>
+    </section>
+
+    <section id="rooms" class="shell" aria-labelledby="rooms-heading">
+      <div class="intro-line">
+        <div><div class="eyebrow">Find your setup</div><h2 id="rooms-heading">Three rooms. Your sound.</h2></div>
+        <p>Choose a space to start your booking request.</p>
+      </div>
+      <div class="rooms">
+        <article class="room-card" data-room-card="studio">
+            <img src="src/recording_studioo.jpg" alt="The Recording Room" class="room-photo">
+          <div class="room-topline"><span class="room-index">ROOM 01</span><span class="capacity">Recording</span></div>
+          <h3>Recording Studio</h3>
+          <p>A dedicated recording room with a full instrument setup. Come in with a song; leave with a take.</p>
+          <ul class="gear-list"><li>Recording setup</li><li>Full instrument setup</li><li>For recording</li></ul>
+          <button class="choose-room" type="button" data-select-room="studio"><span>Choose this room</span><span aria-hidden="true">↗</span></button>
+        </article>
+        <article class="room-card" data-room-card="small">
+          <img src="src/small_room.jpg" alt="The Small Room" class="room-photo">
+          <div class="room-topline"><span class="room-index">ROOM 02</span><span class="capacity">1–3 people</span></div>
+          <h3>The Small Room</h3>
+          <p>Just you, or bring a couple of friends. A cosy setup for ideas, practice, and stripped-back sessions.</p>
+          <ul class="gear-list"><li>Microphone</li><li>Piano</li><li>Guitar</li></ul>
+          <button class="choose-room" type="button" data-select-room="small"><span>Choose this room</span><span aria-hidden="true">↗</span></button>
+        </article>
+        <article class="room-card" data-room-card="large">
+          <img src="src/big_room.jpg" alt="The Big Room" class="room-photo">
+          <div class="room-topline"><span class="room-index">ROOM 03</span><span class="capacity">Up to 9 people</span></div>
+          <h3>The Big Room</h3>
+          <p>Space for the whole band. Plug in, turn it up, and work through the set together.</p>
+          <ul class="gear-list"><li>Drums</li><li>Bass</li><li>Electric guitar</li><li>Piano</li><li>2 microphones</li></ul>
+          <button class="choose-room" type="button" data-select-room="large"><span>Choose this room</span><span aria-hidden="true">↗</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section id="booking" class="booking-section" aria-labelledby="booking-heading">
+      <div class="shell booking-wrap">
+        <div class="booking-intro">
+          <div class="eyebrow">One good session starts here</div>
+          <h2 id="booking-heading">Save a spot for your sound.</h2>
+          <p>Tell us what you need and when you’d like to come in. We’ll get back to you to confirm availability.</p>
+          <div class="booking-note"><b aria-hidden="true">♪</b><span>Booking a group? Add everyone who’ll be playing to your headcount.</span></div>
+        </div>
+        <form class="booking-form" id="booking-form">
+          <div class="field full">
+            <label for="room">Choose a room</label>
+            <select id="room" name="room" required>
+              <option value="" disabled selected>Select a room</option>
+              <option value="studio">Recording Studio</option>
+              <option value="small">The Small Room</option>
+              <option value="large">The Big Room</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="time">Start time</label>
+            <input id="time" name="time" type="time" required>
+          </div>
+          <div class="field">
+            <label for="people">People</label>
+            <input id="people" name="people" type="number" min="1" value="1" required>
+          </div>
+          <div class="field">
+            <label for="duration">Session length</label>
+            <select id="duration" name="duration" required>
+              <option value="1">1 hour</option><option value="2" selected>2 hours</option><option value="3">3 hours</option><option value="4">4 hours</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <div class="form-foot">
+            <small>This is a booking request. Your session is confirmed after we reply.</small>
+            <button class="button" type="submit">Send booking request <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="confirmation" id="confirmation" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="shell footer-inner"><span>© 2026 ROOMTONE · Made for making music - Ilenia Albanese </span><a href="#top">Back to top ↑</a></div>
+  </footer>
+  <script>
+    const roomSelect = document.querySelector('#room');
+    const peopleInput = document.querySelector('#people');
+    const dateInput = document.querySelector('#date');
+    const confirmation = document.querySelector('#confirmation');
+    const roomNames = { studio: 'Recording Studio', small: 'The Small Room', large: 'The Big Room' };
+
+    dateInput.min = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+
+    function updateRoom(room) {
+      roomSelect.value = room;
+      document.querySelectorAll('[data-room-card]').forEach(card => {
+        const selected = card.dataset.roomCard === room;
+        card.classList.toggle('is-selected', selected);
+        if (selected) card.setAttribute('aria-current', 'true');
+        else card.removeAttribute('aria-current');
+      });
+      if (room === 'small') {
+        peopleInput.max = '3';
+        if (+peopleInput.value > 3) peopleInput.value = '3';
+      } else if (room === 'large') {
+        peopleInput.max = '9';
+        if (+peopleInput.value > 9) peopleInput.value = '9';
+      } else {
+        peopleInput.removeAttribute('max');
+        peopleInput.setCustomValidity('');
+      }
+      confirmation.classList.remove('show');
+    }
+
+    document.querySelectorAll('[data-select-room]').forEach(button => {
+      button.addEventListener('click', () => {
+        updateRoom(button.dataset.selectRoom);
+        document.querySelector('#booking').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    roomSelect.addEventListener('change', () => updateRoom(roomSelect.value));
+
+    document.querySelector('#booking-form').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!roomSelect.value) {
+        roomSelect.focus();
+        return;
+      }
+      if (!event.currentTarget.reportValidity()) return;
+      const data = new FormData(event.currentTarget);
+      const date = new Date(`${data.get('date')}T00:00:00`).toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' });
+      confirmation.textContent = `Thanks, ${data.get('name')}! Your request for ${roomNames[data.get('room')]} on ${date} at ${data.get('time')} for ${data.get('people')} ${data.get('people') === '1' ? 'person' : 'people'} (${data.get('duration')} ${data.get('duration') === '1' ? 'hour' : 'hours'}) is ready. This demo doesn’t send it yet — connect a booking service to receive and confirm requests.`;
+      confirmation.classList.add('show');
+      confirmation.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>
